@@ -1,0 +1,21 @@
+<div class="card mt-5">
+            <div class='row'>
+                <div class="card-body">
+                    <h4>    {{note}}  
+                        <span class="badge badge-{{note.get_label_display}}">{{note.due_date}}</span>
+                        <span class='icons'> 
+                            {% if type == 'finish' %}
+                            <a href='{{note.get_finish_url}}'><i class="fas fa-clipboard-check"></i><a> 
+
+                            {%else%}
+                            <a href='{{note.get_recover_url}}'><i class="fas fa-recycle recover"></i></a>
+                                
+                                
+                            {%endif%}
+                            <a href='{{note.get_delete_url}}'><i class="fas fa-trash-alt trash"></i></a>
+                        </span> 
+                    </h4>
+                    
+                </div>
+            </div>
+</div>
